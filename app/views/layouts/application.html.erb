@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Vagabond</title>
+    <title>Vagabondtotheface</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+      <h1>VAGABOND.to.the.face.</h1>
+      <%= yield %>
+    </div>
   </body>
+
 </html>
