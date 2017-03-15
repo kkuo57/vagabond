@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Princess Vagabond</title>
+    <title>Princess : Vagabond</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/css?family=Bilbo|Fredericka+the+Great|Princess+Sofia|Sacramento" rel="stylesheet">
 
   </head>
 
   <body>
-    <div class="navigation">
+    <div class="container">
       <ul>
         <% if current_user %>
           <li><%= link_to "Profile", user_path(current_user) %> | </li>
@@ -29,6 +31,11 @@
       <h1>Princess Vagabond</h1>
       <%= yield %>
     </div>
+
+    <footer>
+      <p>TeamTeamwork</p>
+    </footer>
+
   </body>
 
 </html>

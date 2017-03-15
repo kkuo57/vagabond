@@ -10,7 +10,6 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require bootstrap-3.3.6.min.css
  *= require_tree .
  *= require_self
  */
@@ -40,5 +39,7 @@ li {
 
 .panel {
   max-width: 50%;
-  background-color: goldenrod;
+  background-color: lemonchiffon;
+  border-radius: 25px;
+  padding: 5px;
 }
