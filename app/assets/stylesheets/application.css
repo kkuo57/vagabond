@@ -15,7 +15,30 @@
  *= require_self
  */
 
+body {
+  background: gold;
+}
+
 h1 {
-  font-family: 'Permanent Marker', sans-serif;
+  color: Magenta;
+  font-size: 4em;
+  font-family: 'Fredericka the Great', sans-serif;
   text-align: center;
+  text-shadow: 1px 1px white;
+}
+
+h2 {
+  font-family: 'Sacramento', sans-serif;
+  font-size: 3em;
+  font-weight: 400;
+}
+
+li {
+  text-decoration: none;
+  display: inline;
+}
+
+.panel {
+  max-width: 50%;
+  background-color: goldenrod;
 }

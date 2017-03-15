@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170314183539) do
+ActiveRecord::Schema.define(version: 20170315004319) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "articles", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.integer  "city_id"
+    t.index ["city_id"], name: "index_articles_on_city_id", using: :btree
+    t.index ["user_id"], name: "index_articles_on_user_id", using: :btree
+  end
 
   create_table "cities", force: :cascade do |t|
     t.string   "city_name"
@@ -32,4 +41,6 @@ ActiveRecord::Schema.define(version: 20170314183539) do
     t.string   "password_digest"
   end
 
+  add_foreign_key "articles", "cities"
+  add_foreign_key "articles", "users"
 end

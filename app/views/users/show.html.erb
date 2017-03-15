@@ -1,0 +1,9 @@
+<div class="container">
+  <h2>Welcome, <%= @user.first_name %> <%= @user.last_name %></h2>
+
+  <%= link_to "Edit Profile", edit_user_path(current_user) %>
+
+  <p>current city: <%= @user.current_city %></p>
+  <p>date joined:  <%= @user.created_at %></p>
+  <p>email: <%= @user.email %></p>
+</div>
