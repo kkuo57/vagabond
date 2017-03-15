@@ -1,7 +1,12 @@
 
- Login
+ <h2>Login</h2>
+ <br>
 <%= form_for @user, url: '/sessions', method: 'post' do |f| %>
-  <%= f.email_field :email, placeholder: 'email' %>
-  <%= f.password_field :password, placeholder: 'password' %>
+  <label for="email">Vagabond Email Address:
+    <%= f.email_field :email %>
+  </label>
+  <label for="email">Password:
+    <%= f.password_field :password %>
+  </label>
   <%= f.submit " Login to Vagabond! "%>
 <% end %>

@@ -10,7 +10,6 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require bootstrap-3.3.6.min.css
  *= require_tree .
  *= require_self
  */
@@ -19,18 +18,10 @@ body {
   background: gold;
 }
 
-h1 {
-  color: Magenta;
-  font-size: 4em;
-  font-family: 'Fredericka the Great', sans-serif;
-  text-align: center;
-  text-shadow: 1px 1px white;
-}
 
 h2 {
   font-family: 'Sacramento', sans-serif;
-  font-size: 3em;
-  font-weight: 400;
+  font-size: 50px;
 }
 
 li {
@@ -38,7 +29,55 @@ li {
   display: inline;
 }
 
-.panel {
-  max-width: 50%;
+footer p {
   background-color: goldenrod;
+  font-family: 'Princess Sofia', sans-serif;
+  font-size: 45px;
+  height: 50px;
+  text-align: center;
+}
+
+
+.flash-msg, .back-btn {
+  font-family: 'Princess Sofia', sans-serif;
+  font-size: 45px;
+  color: dodgerblue;
+  text-shadow: 1px 2px black;
+
+}
+
+.headline {
+  color: Magenta;
+  font-size: 5em;
+  font-family: 'Fredericka the Great', sans-serif;
+  text-align: center;
+  text-shadow: 1px 1px lemonchiffon;
+  display: block;
+}
+
+.tagline {
+  font-family: 'Bilbo', sans-serif;
+  font-size: 35px;
+  margin-top: -40px;
+  text-align: center;
+  display: block;
+  text-shadow: 1px 1px lemonchiffon;
+}
+
+.panel {
+  font-size: 25px;
+  max-width: 80%;
+  background-color: lemonchiffon;
+  border-radius: 25px;
+  padding: 5px;
+}
+
+.navigation {
+  background-color: lemonchiffon;
+  height: 50px;
+}
+
+.nav-link {
+  margin-left: 50px;
+  padding-top: 15px;
 }
