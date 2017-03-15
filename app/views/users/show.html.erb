@@ -9,4 +9,6 @@
   <%= button_to " Delete Account ", {action:"destroy", id: @user.id},
                                       method: :delete, data: { confirm: 'Are you sure?' } %>
 
+  <%= link_to "View Your Posts", articles_path %>
+
 </div>

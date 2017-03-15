@@ -4,9 +4,14 @@ class ArticlesController < ApplicationController
   # before_action :set_user
   # before_action :set_city
 
-  def index
-    @articles = Article.all
-  end
+
+    def index
+        @user = current_user
+        @articles = @user.articles
+            render :index
+
+      end
+
 
   def new
     @city = City.find(params[:id])
@@ -15,7 +20,7 @@ class ArticlesController < ApplicationController
 
   def create
     p = article_params
-    to_save = {title: p[:title], body: p[:body], user_id: current_user.id}
+    to_save = {title: p[:title], body: p[:body], user_id: current_user.id, city_id: p[:city_id]}
     @article = Article.create(to_save)
     redirect_to cities_path
   end
