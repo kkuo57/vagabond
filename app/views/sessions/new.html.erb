@@ -1,0 +1,7 @@
+
+ Login
+<%= form_for @user, url: '/sessions', method: 'post' do |f| %>
+  <%= f.email_field :email, placeholder: 'email' %>
+  <%= f.password_field :password, placeholder: 'password' %>
+  <%= f.submit " Login to Vagabond! "%>
+<% end %>

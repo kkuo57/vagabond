@@ -1,3 +1,9 @@
-<% @cities.each do |city|  %>
-  <%= city.city_name %>
-<% end %>
+<div class="container">
+  <h2>Cities Available</h2>
+
+  <% @cities.each do |city|  %>
+    <div class="row panel">
+      <%= link_to "#{city.name}, #{city.country}", city_path(city) %>
+    </div>
+  <% end %>
+</div>
