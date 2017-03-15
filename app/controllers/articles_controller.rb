@@ -15,8 +15,8 @@ class ArticlesController < ApplicationController
 
   def create
     p = article_params
-    to_save = {title: p[:title], body: p[:body], user_id: current_user.id}
-    @article = Article.create(to_save)
+    p[:user_id] = current_user.id
+    @article = Article.create(p)
     redirect_to cities_path
   end
 
