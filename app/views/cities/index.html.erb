@@ -3,7 +3,7 @@
 
   <% @cities.each do |city|  %>
     <div class="row panel">
-      <%= link_to "#{city.name}, #{city.country}", city_path(city) %>
+      ★ <%= link_to "#{city.name}, #{city.country}", city_path(city) %>
     </div>
   <% end %>
 </div>
