@@ -1,0 +1,9 @@
+<div class="container">
+  Articles about <%= @city.name %>
+  <ul>
+    <% @articles.each do |article| %>
+      <li><%= article.title %> by <%= @user.first_name %> </li>
+      <p><%= article.body %></p>
+    <% end %>
+  </ul>
+</div>

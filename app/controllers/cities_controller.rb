@@ -1,5 +1,7 @@
 class CitiesController < ApplicationController
 
+  before_action :set_city, only: [:show, :edit, :destroy, :update]
+
   # Index of All Cities
   def index
     @cities = City.all
@@ -27,6 +29,10 @@ class CitiesController < ApplicationController
 
 
   private
+
+  def set_city
+    @city = City.find(params[:id])
+  end
 
   # Defines parameters for 'City'
   def city_params

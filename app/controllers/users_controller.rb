@@ -37,7 +37,8 @@ class UsersController < ApplicationController
 
   # Delete User Account
   def destroy
-    @user = User.destroy(:id)
+    @user = User.destroy(current_user)
+    redirect_to root_path
   end
 
   private

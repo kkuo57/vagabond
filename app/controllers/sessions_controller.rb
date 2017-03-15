@@ -10,10 +10,10 @@ class SessionsController < ApplicationController
     @user = User.confirm(user_params)
     if @user
       login(@user)
-      flash[:blank] = "Now, you're vagabound!"
+      flash["Login Successful"] = "Now, you're vagabound!"
       redirect_to user_path(current_user)
     else
-      flash[:warning] = "Try again..."
+      flash["Incorrect Email or Password"] = "Try again..."
       redirect_to login_path
     end
   end
@@ -21,7 +21,7 @@ class SessionsController < ApplicationController
   # Destroy A User Session
   def destroy
     logout
-    flash[:notice] = "Logged Out"
+    flash["Logged Out"] = "Please visit us again"
     redirect_to root_path
   end
 
