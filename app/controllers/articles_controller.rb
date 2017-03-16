@@ -8,6 +8,10 @@ class ArticlesController < ApplicationController
     @articles = Article.all
   end
 
+  def show
+    @article = Article.find(params[:id])
+  end
+
   def new
     @city = City.find(params[:id])
     @article = Article.new
@@ -17,7 +21,7 @@ class ArticlesController < ApplicationController
     p = article_params
     p[:user_id] = current_user.id
     @article = Article.create(p)
-    redirect_to cities_path
+    redirect_to article_path(@article.id)
   end
 
   def edit
@@ -29,7 +33,8 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
-    @article = Article.destroy
+    @article = Article.destroy(params[:id])
+    redirect_to user_path(current_user)
   end
 
   private
