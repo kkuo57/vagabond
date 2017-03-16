@@ -9,7 +9,11 @@ class UsersController < ApplicationController
 
   # Single User's Page
   def show
-    # shows 'user' page
+    if current_user == nil
+      redirect_to login_path
+    else
+      @user
+    end
   end
 
   # 'Sign Up' form
