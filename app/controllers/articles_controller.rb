@@ -6,9 +6,13 @@ class ArticlesController < ApplicationController
 
 
   def index
-    @user = current_user
-    @articles = @user.articles
-    render :index
+    if current_user == nil
+      redirect_to login_path
+    else
+      @user = current_user
+      @articles = @user.articles
+      render :index
+    end
   end
 
   def show
