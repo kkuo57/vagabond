@@ -1,16 +1,6 @@
 <div class="container">
-  <h2>All Posts by <%= @user.first_name %> <%= @user.last_name %></h2>
-
-  <!-- <%= link_to "Edit Profile", edit_user_path(current_user) %> -->
-
-  @user = User.find(params[:user_id])
-  @articles = @user.articles
-
-      <!-- <% @articles.each do |article|  %>
-      <%= @article.title  </br> %>
-      <%= @article.body %> -->
-
-
-
-
+  <h2><%= @article.title %></h2>
+  <h5>Author: <%= @article.user.first_name %> <%= @article.user.last_name %></h5>
+  <p><%= @article.body %></p>
+  <%= button_to " Delete Article ", {action:"destroy", id: @article.id}, method: :delete, data: { confirm: 'Are you sure?' } %>
 </div>
