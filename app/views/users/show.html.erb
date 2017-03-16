@@ -1,12 +1,16 @@
 <div class="container">
-  <h2>Welcome, <%= @user.first_name %> <%= @user.last_name %></h2>
+  <h2>Welcome, <span class="highlight-name"><%= @user.first_name %> <%= @user.last_name %></span></h2>
 
-  <%= link_to "Edit Profile", edit_user_path(current_user) %>
 
-  <p>current city: <%= @user.current_city %></p>
-  <p>date joined:  <%= @user.created_at %></p>
-  <p>email: <%= @user.email %></p>
-  <%= button_to " Delete Account ", {action:"destroy", id: @user.id},
+  <span class="edit-profile"><%= link_to "Edit Profile", edit_user_path(current_user) %></span>
+  <span class="article-link"><%= link_to " Articles ", user_articles_path %></span>
+  <br>
+  <p class="user-info"> <span class="user-info-key"> My Current City: </span> <%= @user.current_city %></p>
+  <p class="user-info"> <span class="user-info-key"> Date Joined: </span> <%= @user.created_at %></p>
+  <p class="user-info"> <span class="user-info-key"> Email: </span> <%= @user.email %></p>
+  <hr>
+  <br>
+   <%= button_to " Delete Account ", {action:"destroy", id: @user.id},
                                       method: :delete, data: { confirm: 'Are you sure?' } %>
 
 </div>

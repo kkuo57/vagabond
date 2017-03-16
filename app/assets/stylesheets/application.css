@@ -38,12 +38,19 @@ footer p {
 }
 
 
-.flash-msg, .back-btn {
+.flash-msg, .back-btn, .new-article, .edit-profile, .article-link {
   font-family: 'Princess Sofia', sans-serif;
   font-size: 45px;
   color: dodgerblue;
   text-shadow: 1px 2px black;
+}
 
+.article-link {
+  float: right;
+}
+
+.edit-profile {
+  font-size: 35px;
 }
 
 .headline {
@@ -80,4 +87,19 @@ footer p {
 .nav-link {
   margin-left: 50px;
   padding-top: 15px;
+}
+
+.user-info {
+  color: salmon;
+  font-family: 'Bilbo', sans-serif;
+  font-size: 45px;
+  text-shadow: 1px 1px lemonchiffon;
+}
+
+.user-info .user-info-key {
+  color: black;
+}
+
+.highlight-name {
+  text-shadow : 1px 2px dodgerblue;
 }
