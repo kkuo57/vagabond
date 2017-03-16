@@ -6,6 +6,6 @@
     <%= f.text_field :title  %>
   <label for="body"> What Did You Do? : </label>
     <%= f.text_area :body %>
-  <%= f.hidden_field "city_id",  :value => @city.id %>
+  <%= f.hidden_field :city_id, :value => @city.id %>
   <%= f.submit " Submit Your Article! " %>
 <% end %>
