@@ -1,5 +1,5 @@
 <div class="container">
-  Articles about <%= @city.name %>
+  Articles by <%= @user.first_name %>
   <ul>
     <% @articles.each do |article| %>
       <li><%= article.title %> by <%= @user.first_name %> </li>
