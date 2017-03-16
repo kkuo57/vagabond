@@ -1,8 +1,10 @@
 <div class="container">
   <h2><%= @city.city_name %>, <%= @city.country %></h2>
   <hr>
-  <span class="new-article"><%= link_to "new article", new_article_path %></span>
-  <span class="article-link"><%= link_to " articles ", user_articles_path %></span>
+  <% if current_user %>
+    <span class="new-article"><%= link_to "new article", new_article_path %></span>
+    <span class="article-link"><%= link_to " articles ", user_articles_path %></span>
+  <% end %>
 
   <div class="carousel">
     <a class="carousel-item" href="#one!"><img src="https://upload.wikimedia.org/wikipedia/en/d/d5/Belle_disney.png"></a>
@@ -12,6 +14,13 @@
     <a class="carousel-item" href="#five!"><img src="https://upload.wikimedia.org/wikipedia/en/d/d5/Belle_disney.png"></a>
   </div>
 
-  <hr>
+  <div>
+    <% @city.articles.reverse_each do |article| %>
+      <hr>
+      <li>Title: <%= link_to article.title, article_path(article) %></li><br>
+      <li>Content: <%= article.body.truncate(25, separator: /\s/) %></li><br>
+    <% end %>
+    <hr>
+  </div>
   <span class="back-btn"><%= link_to "back", cities_path %></span>
 </div>

@@ -2,8 +2,10 @@
   Articles by <%= @user.first_name %>
   <ul>
     <% @articles.each do |article| %>
+      <hr>
       <li>Title: <%= link_to article.title, article_path(article) %></li><br>
       <li>Content: <%= article.body.truncate(25, separator: /\s/) %></li><br>
     <% end %>
   </ul>
+  <hr>
 </div>

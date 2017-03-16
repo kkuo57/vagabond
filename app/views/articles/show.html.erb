@@ -1,6 +1,7 @@
 <div class="container">
-  <h2><%= @article.title %></h2>
-  <h5>Author: <%= @article.user.first_name %> <%= @article.user.last_name %></h5>
-  <p><%= @article.body %></p>
-  <%= button_to " Delete Article ", {action:"destroy", id: @article.id}, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <h2><%= @article.title %></h2>
+    <h5>City: <%= @article.city.name %>
+    <h5>Author: <%= @article.user.first_name %> <%= @article.user.last_name %></h5>
+    <p><%= @article.body %></p>
+    <%= button_to " Delete Article ", {action:"destroy", id: @article.id}, method: :delete, data: { confirm: 'Are you sure?' } %>
 </div>

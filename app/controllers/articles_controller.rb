@@ -5,13 +5,11 @@ class ArticlesController < ApplicationController
   # before_action :set_city
 
 
-    def index
-        @user = current_user
-        @articles = @user.articles
-            render :index
-
-      end
-
+  def index
+    @user = current_user
+    @articles = @user.articles
+    render :index
+  end
 
   def show
     @article = Article.find(params[:id])
