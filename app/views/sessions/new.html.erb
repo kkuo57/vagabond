@@ -3,10 +3,10 @@
  <br>
 <%= form_for @user, url: '/sessions', method: 'post' do |f| %>
   <label for="email">Vagabond Email Address:
-    <%= f.email_field :email %>
+    <%= f.email_field :email, :required => true %>
   </label>
   <label for="email">Password:
-    <%= f.password_field :password %>
+    <%= f.password_field :password, :required => true %>
   </label>
   <%= f.submit " Login to Vagabond! "%>
 <% end %>
