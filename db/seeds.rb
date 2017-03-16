@@ -11,7 +11,7 @@ Article.destroy_all
 
 cities = [
   {city_name:"London", country:"England"},
-  {city_name:"Tokyo", country:"Japan"},
+  {city_name:"San Francisco, CA", country:"USA"},
   {city_name:"Topeka, KS", country:"USA"},
   {city_name:"Mogadishu", country:"Somalia"},
   {city_name:"Gibraltar", country:"Gibraltar"},

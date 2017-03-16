@@ -21,10 +21,14 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    p = article_params
-    p[:user_id] = current_user.id
-    @article = Article.create(p)
-    redirect_to article_path(@article.id)
+    if current_user == nil
+      redirect_to login_path
+    else
+      p = article_params
+      p[:user_id] = current_user.id
+      @article = Article.create(p)
+      redirect_to article_path(@article.id)
+    end
   end
 
   def edit
