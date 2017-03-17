@@ -1,8 +1,20 @@
-<%= form_for @user do |f| %>
-  <%= f.text_field :first_name, :required => true, placeholder: " First Name "  %>
-  <%= f.text_field :last_name, :required => true, placeholder: " Last Name "  %>
-  <%= f.text_field :current_city, :required => true, placeholder: " Current City "  %>
-  <%= f.email_field :email, :required => true, placeholder: " Email "  %>
-  <%= f.password_field :password, :required => true, placeholder: " Password "  %>
+<div class="container amber lighten-3 our-form">
+  <%= form_for @user do |f| %>
+  <label for="first name">What's Your First Name? :
+    <%= f.text_field :first_name, :required => true, placeholder: " First Name "  %>
+  </label>
+  <label for="last name">What's Your Last Name? :
+    <%= f.text_field :last_name, :required => true, placeholder: " Last Name "  %>
+  </label>
+  <label for="current city">What's Your Current City? :
+    <%= f.text_field :current_city, :required => true, placeholder: " Current City "  %>
+  </label>
+  <label for="email">What's Your Email Address? :
+    <%= f.email_field :email, :required => true, placeholder: " Email "  %>
+  </label>
+  <label for="password">What's Your Vagabond Password? :
+    <%= f.password_field :password, :required => true, placeholder: " Password "  %>
+  </label>
   <%= f.submit " Sign Up! " %>
-<% end %>
+  <% end %>
+</div>
