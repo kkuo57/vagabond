@@ -7,10 +7,10 @@
     <div class="row card horizontal amber lighten-3 hoverable">
 
       <div class="card-image responsive-img">
-        <img src="assets/sf1.jpg" alt="City Pic">
+        <%= image_tag("#{city.pic}") %>
       </div>
 
-        <p class="center-align"> &#x2655; <%= link_to "#{city.name}, #{city.country}", city_path(city) %> </p>
+        <p class="city-info"> &#x2655; <%= link_to "#{city.name}, #{city.country}", city_path(city) %> </p>
 
     </div>
 

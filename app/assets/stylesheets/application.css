@@ -60,6 +60,10 @@ footer p {
   line-height: normal;
 }
 
+.city-info {
+  padding-left: 10px;
+}
+
 .our-form {
   padding: 10px;
   border-radius: 15px;
