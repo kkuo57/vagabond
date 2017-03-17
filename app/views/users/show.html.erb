@@ -3,7 +3,7 @@
 
 
   <span class="edit-profile"><%= link_to "Edit Profile", edit_user_path(current_user) %></span>
-  <span class="article-link"><%= link_to " Articles ", user_articles_path %></span>
+  <span class="article-link"><%= link_to "My Posts", user_articles_path %></span>
   <br>
   <p class="user-info"> <span class="user-info-key"> My Current City: </span> <%= @user.current_city %></p>
   <p class="user-info"> <span class="user-info-key"> Date Joined: </span> <%= @user.created_at %></p>
