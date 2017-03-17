@@ -20,15 +20,21 @@
 
 
   </head>
+
+
   <body>
-    <div class="navigation">
+  <!-- Navigation -->
+    <div class="navigation amber lighten-3">
+      <!-- User Nav -->
       <ul>
-        <div class="nav-link">
+        <div>
           <% if current_user %>
-            <li><%= link_to " Home ", root_path %> | </li>
-            <li><%= link_to " Logout ", logout_path %></li>
-          <span class="profile"><%= link_to " Profile ", user_path(current_user) %></span>
+            <li class="nav-link"><%= link_to " Home ", root_path %></li>
+            <li class="nav-link"><%= link_to " My Profile ", user_path(current_user) %></li>
+            <li class="nav-link logout-link"><%= link_to " Logout ", logout_path %></li>
       </ul>
+
+      <!-- Default Nav -->
       <ul>
           <% else %>
             <li><%= link_to " Home ", root_path %> | </li>
@@ -39,44 +45,30 @@
       </ul>
     </div>
 
+  <!-- Header -->
     <div class="container">
       <header>
-        <span class="headline">Princess Vagabond</span><br / />
-        <hr />
-          <span class="tagline">Because sometimes we all need to run away from home.</span>
+        <span class="headline">Princess Vagabond</span>
+        <span class="tagline">I Can Show You The World!</span>
 
-          <div class="flash-msg"><% flash.each do |name, msg| %>
-            <p>
-              <small><%= name.capitalize %> : <%= msg %></small>
-            </p>
-          <% end %> </div> <!--ends flash.each-->
-
-
-        <!-- <div class="carousel">
-
-        <div class="carousel">
-
-          <a class="carousel-item" href="#one!"><img src="https://arunimabasu.files.wordpress.com/2014/12/canstockphoto8820306.jpg"></a>
-          <a class="carousel-item" href="#two!"><img src="http://www.wickedgoodtraveltips.com/wp-content/uploads/2013/01/cartoon-family-in-car.jpg"></a>
-          <a class="carousel-item" href="#three!"><img src="https://img.clipartfest.com/da30fdb55a7d351a43d48770afd9f389_for-airplane-travel-family-travel-plane-clipart_1200-900.jpeg"></a>
-          <a class="carousel-item" href="#four!"><img src="https://www.accentinns.com/blog/wp-content/uploads/2015/03/drive-bc.jpg"></a>
-          <a class="carousel-item" href="#five!"><img src="http://tmsfamilytravel.com/wp-content/uploads/2016/07/family.png"></a>
-
-        </div> -->
-
-        </div>
+        <!-- Flash Messages -->
+        <div class="flash-msg"><% flash.each do |name, msg| %>
+          <p>
+            <small><%= name.capitalize %> : <%= msg %></small>
+          </p>
+          <% end %>
+        </div> <!--ends flash.each-->
 
       </header>
-<%= yield %>
+    </div>
 
-
+  <%= yield %>
 
     </div>
 
-    <footer>
+    <footer class="amber lighten-3">
       <p>TeamTeamwork © 2017</p>
     </footer>
 
   </body>
-
 </html>

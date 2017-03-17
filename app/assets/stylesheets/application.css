@@ -19,11 +19,6 @@ body {
 }
 
 
-h2 {
-  font-family: sans-serif;
-  font-size: 50px;
-}
-
 li {
   text-decoration: none;
   display: inline;
@@ -31,9 +26,9 @@ li {
 
 
 footer p {
-  background-color: gold;
+  /*background-color: gold;*/
   font-family: 'Princess Sofia', sans-serif;
-  font-size: 45px;
+  font-size: 25px;
   height: 1.4em;
   text-align: center;
 }
@@ -65,11 +60,24 @@ footer p {
   line-height: normal;
 }
 
+.our-form {
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.new-article-text {
+  height: 200px;
+}
+
+.article-title {
+  color: limegreen;
+  font-weight: bolder;
+}
+
 .tagline {
-  font-family:  sans-serif;
-  font-size: 28px;
-  margin-top: 20px;
-  margin-bottom: -30px;
+  font-family: 'Sacramento', sans-serif;
+  font-size: 50px;
+  font-weight: bolder;
   text-align: center;
   display: block;
   text-shadow: 1px 1px lemonchiffon;
@@ -81,32 +89,27 @@ footer p {
   margin-top: -90px;
 }
 
-.panel {
-  font-size: 25px;
-  max-width: 80%;
-  background-color: lemonchiffon;
-  border-radius: 25px;
+.card-image {
+  width: 200px;
+}
+
+.card {
   padding: 5px;
 }
 
-
-.profile{
-  text-align: right;
-  right: 0px;
-  position: absolute;
-}
-
 .navigation {
-  background-color: gold;
   height: 50px;
-  /*text-align: right;*/
 }
 
 .nav-link {
-  margin-left: 50px;
-  padding-top: 15px;
+  /*margin-left: 50px;*/
+  padding: 15px;
   text-align: left;
   float: left;
+}
+
+.logout-link {
+  float: right;
 }
 
 .user-info {
@@ -126,5 +129,8 @@ footer p {
 }
 
 .world-map {
-  max-height: 500px;
+  display: block;
+  margin: auto;
+  width: 50%;
+  border-radius: 15%;
 }
