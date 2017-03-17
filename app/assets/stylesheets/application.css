@@ -33,20 +33,18 @@ footer p {
   text-align: center;
 }
 
+.city-pic {
+  width: 100px;
+}
 
-.flash-msg, .back-btn, .new-article, .edit-profile, .article-link {
+.flash-msg, .back-btn, .new-article, .profile-link, .article-link {
   font-family: sans-serif;
   font-size: 30px;
   color: dodgerblue;
-  text-shadow: 1px 2px black;
 }
 
 .article-link {
   float: right;
-}
-
-.edit-profile {
-  font-size: 35px;
 }
 
 .headline {
@@ -116,16 +114,9 @@ footer p {
   float: right;
 }
 
-.user-info {
-  color: salmon;
-  font-family: sans-serif;
-  font-size: 45px;
-  text-shadow: 1px 1px lemonchiffon;
-}
-
-.user-info .user-info-key {
+.user-info-key {
   color: black;
-  font-size: .7em;
+  font-weight: bolder;
 }
 
 .highlight-name {
@@ -135,6 +126,11 @@ footer p {
 .world-map {
   display: block;
   margin: auto;
-  width: 50%;
   border-radius: 15%;
+  width: 50%;
+}
+
+.big-city-pic {
+  display: block;
+  margin: auto;
 }

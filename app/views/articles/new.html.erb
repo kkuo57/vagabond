@@ -1,6 +1,6 @@
 <div class="container">
   <h2>Add A New Article</h2>
-  <div class="new-form amber lighten-3">
+  <div class="our-form amber lighten-3">
     <%= form_for @article, url: '/articles', method: 'post' do |f| %>
       <label for="title"> Article Title </label>
       <%= f.text_field :title %>

@@ -2,17 +2,11 @@
   <h2><%= @city.city_name %>, <%= @city.country %></h2>
   <hr>
   <% if current_user %>
-    <span class="new-article"><%= link_to "new article", new_article_path %></span>
+    <span class="new-article"><%= link_to "New article", new_article_path %></span>
     <span class="article-link"><%= link_to " My articles ", user_articles_path %></span>
   <% end %>
 
-  <div class="carousel">
-    <a class="carousel-item" href="#one!"><img src="https://upload.wikimedia.org/wikipedia/en/d/d5/Belle_disney.png"></a>
-    <a class="carousel-item" href="#two!"><img src="https://upload.wikimedia.org/wikipedia/en/d/d5/Belle_disney.png"></a>
-    <a class="carousel-item" href="#three!"><img src="https://upload.wikimedia.org/wikipedia/en/d/d5/Belle_disney.png"></a>
-    <a class="carousel-item" href="#four!"><img src="https://upload.wikimedia.org/wikipedia/en/d/d5/Belle_disney.png"></a>
-    <a class="carousel-item" href="#five!"><img src="https://upload.wikimedia.org/wikipedia/en/d/d5/Belle_disney.png"></a>
-  </div>
+  <%= image_tag("#{@city.pic}", size: "800x600", :class => "big-city-pic responsive-img") %>
 
   <div>
     <% @city.articles.reverse_each do |article| %>

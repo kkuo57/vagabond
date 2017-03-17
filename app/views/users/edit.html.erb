@@ -1,10 +1,16 @@
 <div class="container amber lighten-3 our-form">
   <%= form_for @user do |f| %>
+    <label for="first name">First Name:</label>
     <%= f.text_field :first_name, placeholder: " First Name "  %>
+    <label for="last name">Last Name:</label>
     <%= f.text_field :last_name, placeholder: " Last Name "  %>
+    <label for="current city">Current City:</label>
     <%= f.text_field :current_city, placeholder: " Current City "  %>
+    <label for="email">Email:</label>
     <%= f.email_field :email, placeholder: " Email "  %>
+    <label for="password">Password:</label>
     <%= f.password_field :password, placeholder: " Password "  %>
+    <br>
     <%= f.submit " Edit Profile " %>
   <% end %>
 </div>
