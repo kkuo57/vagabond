@@ -1,6 +1,6 @@
 # Princess Vagabond
 
-For little princes and princesses on the go, Princess Vagabond is a travel blog that focuses on providing articles about certain locations that we feel people would like to go.
+For little princes and princesses on the go, Princess Vagabond is a travel blog that focuses on providing articles about certain locations that we feel families would like to travel to.
 
 ## Installation
 ```
