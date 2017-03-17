@@ -1,24 +1,30 @@
-# README
+# Princess Vagabond
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+For little princes and princesses on the go, Princess Vagabond is a travel blog that focuses on providing articles about certain locations that we feel people would like to go.
 
-Things you may want to cover:
+## Installation
+```
+bundle install
+```
 
-* Ruby version
+## Usage
 
-* System dependencies
+```
+http://www.vagabondtotheface.herokuapp.com
+```
 
-* Configuration
+## History
 
-* Database creation
+A group project for WDI 35, we had about three days to put this site together.
 
-* Database initialization
+## Credits
 
-* How to run the test suite
+Tim
 
-* Services (job queues, cache servers, search engines, etc.)
+Kevin
 
-* Deployment instructions
+Will
 
-* ...
+## License
+
+shareware
