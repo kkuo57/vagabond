@@ -1,9 +1,19 @@
+<img class="world-map responsive-img" src="/assets/princess_world_map.png"/>
+
 <div class="container">
-  <h2>Attainable Destinations :</h2>
+  <h2>Vacation Destinations :</h2>
 
   <% @cities.each do |city| %>
-    <div class="row panel">
-      ★ <%= link_to "#{city.name}, #{city.country}", city_path(city) %>
+    <div class="row card horizontal amber lighten-3 hoverable">
+
+      <div class="card-image responsive-img">
+        <%= image_tag("#{city.pic}") %>
+      </div>
+
+        <p class="city-info"> &#x2655; <%= link_to "#{city.name}, #{city.country}", city_path(city) %> </p>
+
     </div>
+
   <% end %>
+
 </div>

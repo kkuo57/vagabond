@@ -1,12 +1,13 @@
-<h2>Add A New Article</h2>
-
-<div>
-  <%= form_for @article, url: '/articles', method: 'post' do |f| %>
-    <label for="title"> Article Title </label>
+<div class="container">
+  <h2>Add A New Article</h2>
+  <div class="our-form amber lighten-3">
+    <%= form_for @article, url: '/articles', method: 'post' do |f| %>
+      <label for="title"> Article Title </label>
       <%= f.text_field :title %>
-    <label for="body"> What I Did in <%= @city.name %>: </label>
+      <label for="body"> What I Did in <%= @city.name %>: </label>
       <%= f.text_area :body %>
-    <%= f.hidden_field :city_id, :value => @city.id %>
-    <%= f.submit " Submit My Article! " %>
-  <% end %>
+      <%= f.hidden_field :city_id, :value => @city.id %>
+      <%= f.submit " Submit My Article! " %>
+    <% end %>
+  </div>
 </div>

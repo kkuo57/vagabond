@@ -1,12 +1,11 @@
-
- <h3>Login</h3>
- <br>
-<%= form_for @user, url: '/sessions', method: 'post' do |f| %>
-  <label for="email">Vagabond Email Address:
-    <%= f.email_field :email, :required => true %>
-  </label>
-  <label for="email">Password:
-    <%= f.password_field :password, :required => true %>
-  </label>
+<div class="container amber lighten-3 our-form">
+  <h3>Login</h3>
+  <br>
+  <%= form_for @user, url: '/sessions', method: 'post' do |f| %>
+  <label for="email">Vagabond Email Address: </label>
+  <%= f.email_field :email, :required => true %>
+  <label for="email">Vagabond Password: </label>
+  <%= f.password_field :password, :required => true %>
   <%= f.submit " Login to Vagabond! "%>
-<% end %>
+  <% end %>
+</div>

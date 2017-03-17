@@ -10,16 +10,16 @@ City.destroy_all
 Article.destroy_all
 
 cities = [
-  {city_name:"London", country:"England"},
-  {city_name:"San Francisco, CA", country:"USA"},
-  {city_name:"Topeka, KS", country:"USA"},
-  {city_name:"Mogadishu", country:"Somalia"},
-  {city_name:"Gibraltar", country:"Gibraltar"},
-  {city_name:"Beijing", country:"China"},
-  {city_name:"Cairo", country:"Egypt"},
-  {city_name:"Pawnee, IN", country:"USA"},
-  {city_name:"Reykjavik", country:"Iceland"},
-  {city_name:"Christchurch", country:"New Zealand"},
+  {city_name:"Tokyo", country:"Japan", pic:"tokyo1.jpg"},
+  {city_name:"San Francisco, CA", country:"USA", pic:"sf1.jpg"},
+  {city_name:"Topeka, KS", country:"USA", pic:"topeka1.jpg"},
+  {city_name:"Mogadishu", country:"Somalia", pic:"mogadishu1.jpg"},
+  {city_name:"Gibraltar", country:"Gibraltar", pic:"gibraltar1.jpg"},
+  {city_name:"Beijing", country:"China", pic:"beijing1.jpg"},
+  {city_name:"Cairo", country:"Egypt", pic:"Cairo1.jpg"},
+  {city_name:"Pawnee, IN", country:"USA", pic:"pawnee1.jpg"},
+  {city_name:"Reykjavik", country:"Iceland", pic:"reykjavik1.jpg"},
+  {city_name:"Christchurch", country:"New Zealand", pic:"cc1.jpg"},
 ]
 
 users = [
