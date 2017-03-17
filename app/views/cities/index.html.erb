@@ -6,7 +6,7 @@
 <div class="container">
   <h2>Attainable Destinations :</h2>
 
-  <% @cities.each do |city|  %>
+  <% @cities.each do |city| %>
     <div class="row panel">
       ★ <%= link_to "#{city.name}, #{city.country}", city_path(city) %>
     </div>
