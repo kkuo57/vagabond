@@ -4,6 +4,9 @@
     <h6>In: <%= @article.city.name %>
     <hr>
     <p><%= @article.body %></p>
+
+    <span><%= link_to "Edit Article", edit_article_path(@article.id) %></span>
+
     <hr>
     <%= button_to " Delete Article ", {action:"destroy", id: @article.id}, method: :delete, data: { confirm: 'Are you sure?' } %>
 </div>
