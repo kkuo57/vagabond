@@ -1,8 +1,8 @@
 <h2>Edit My Article</h2>
 
 <%= form_for @article do |f| %>
-  <%= f.text_field :title, " Title " %>
-  <%= f.text_area :body, " Content " %>
-  <%= f.hidden_field :city_id, :value => @city.id %>
+  <%= f.text_field :title, placeholder: " Title " %>
+  <%= f.text_area :body, placeholder:  " Content " %>
+  
   <%= f.submit " Save My Changes! " %>
 <% end %>
