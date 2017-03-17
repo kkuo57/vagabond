@@ -1,9 +1,9 @@
 <div class="container">
-  <h3>Choose your Destination :</h3>
+  <h2>Attainable Destinations :</h2>
 
-  <% @cities.each do |city|  %>
+  <% @cities.each do |city| %>
     <div class="row panel">
-    &#x2655; <%= link_to "#{city.name}, #{city.country}", city_path(city) %>
+      ★ <%= link_to "#{city.name}, #{city.country}", city_path(city) %>
     </div>
   <% end %>
 </div>
